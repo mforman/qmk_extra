@@ -268,6 +268,18 @@ void render_os_config(void) {
     }
 }
 
+void render_keylock_status(led_t led_usb_state) {
+    if (led_usb_state.caps_lock) {
+        oled_write_P(PSTR("CAPS "), false);
+    }
+    else if (is_caps_word_on()) {
+        oled_write_P(PSTR("WORD "), false);
+    }
+    else {
+        oled_write_P(PSTR("     "), false);
+    }
+}
+
 void render_status_main(void) {
     render_layout_name();
     render_space();
@@ -291,6 +303,7 @@ void render_status_main(void) {
         oled_write_P(PSTR(" Off "), false);
     }
 #    endif
+    render_keylock_status(host_keyboard_led_state());
 }
 
 void render_status_secondary(void) { render_logo(); }
