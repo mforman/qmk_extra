@@ -11,3 +11,5 @@ ln -sf $SCRIPT_PATH/users/mforman $QMK_PATH/users/mforman
 ln -sf $SCRIPT_PATH/keyboards/crkbd/keymaps/mforman $QMK_PATH/keyboards/crkbd/keymaps/mforman
 ln -sf $SCRIPT_PATH/keyboards/ergodox_ez/keymaps/mforman $QMK_PATH/keyboards/ergodox_ez/keymaps/mforman
 ln -sf $SCRIPT_PATH/keyboards/gboards/gergoplex/keymaps/mforman $QMK_PATH/keyboards/gboards/gergoplex/keymaps/mforman
+
+find * -type l -not -exec grep -q "^{}$" .gitignore \; -print >> .gitignore
