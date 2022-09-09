@@ -51,6 +51,9 @@ enum mforman_keycodes {
 #define ZOOM_OUT G(KC_MINS)
 #define ZOOM_RST G(KC_0)
 
+#define OSM_CTL OSM(MOD_LCTL)
+#define OSM_SFT OSM(MOD_LSFT)
+
 
 #define ______BASE_THUMB_L______ TC_CMD, TC_SPC, TC_TAB
 #define ______BASE_THUMB_R______ TC_ENT, TC_BSP, TC_OPT
@@ -103,11 +106,11 @@ enum mforman_keycodes {
 #define ________________NUMBER_RIGHT_______________ KC_6, KC_7, KC_8, KC_9, KC_0
 #define ___________________BLANK___________________ _______, _______, _______, _______, _______
 
-uint32_t layer_state_set_keymap(uint32_t state);
-bool     process_record_keymap(uint16_t keycode, keyrecord_t *record);
-void     matrix_scan_keymap(void);
-void     suspend_power_down_keymap(void);
-void     suspend_wakeup_init_keymap(void);
+layer_state_t layer_state_set_keymap(layer_state_t state);
+bool          process_record_keymap(uint16_t keycode, keyrecord_t *record);
+void          matrix_scan_keymap(void);
+void          suspend_power_down_keymap(void);
+void          suspend_wakeup_init_keymap(void);
 
 // clang-format off
 typedef union {
