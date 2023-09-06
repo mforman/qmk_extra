@@ -32,7 +32,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             if (record->event.pressed) {
                 int mod = userspace_config.is_mac_os ? KC_LALT : KC_LCTL;
                 register_code16(mod);
-                tap_code(KC_BSPACE);
+                tap_code(KC_BSPC);
                 unregister_code16(mod);
             }
             break;

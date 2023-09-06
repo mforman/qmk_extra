@@ -5,9 +5,7 @@
 #include "version.h"
 #include "eeprom.h"
 #include "switcher/switcher.h"
-#ifdef OLED_DRIVER_ENABLE
-    #include "oled/oled.h"
-#endif
+
 
 // clang-format off
 enum keyboard_layers {
@@ -33,7 +31,7 @@ enum mforman_keycodes {
 #define TC_SPC LCTL_T(KC_SPACE)
 #define TC_TAB LT(_LOWER, KC_TAB)
 #define TC_OPT OSM(MOD_LALT)
-#define TC_BSP LSFT_T(KC_BSPACE)
+#define TC_BSP LSFT_T(KC_BSPC)
 #define TC_ENT LT(_RAISE, KC_ENTER)
 
 #define MT_F11 CTL_T(KC_F11)
@@ -53,7 +51,6 @@ enum mforman_keycodes {
 
 #define OSM_CTL OSM(MOD_LCTL)
 #define OSM_SFT OSM(MOD_LSFT)
-
 
 #define ______BASE_THUMB_L______ TC_CMD, TC_SPC, TC_TAB
 #define ______BASE_THUMB_R______ TC_ENT, TC_BSP, TC_OPT
@@ -98,13 +95,19 @@ enum mforman_keycodes {
 #define ________________ADJUST_L2__________________ RGB_TOG, RGB_HUI, RGB_SAI, RGB_VAI, RGB_SPI
 #define ________________ADJUST_L3__________________ RGBRST, RGB_HUD, RGB_SAD, RGB_VAD, RGB_SPD
 
-#define ________________ADJUST_R1__________________ XXXXXXX, CG_TOGG , QWERTY, COLEMAK, RESET
+#define ________________ADJUST_R1__________________ XXXXXXX, CG_TOGG , QWERTY, COLEMAK, QK_BOOT
 #define ________________ADJUST_R2__________________ KC_MPLY, KC_MRWD, KC_VOLD, KC_VOLU, KC_MFFD
 #define ________________ADJUST_R3__________________ XXXXXXX, KC_LSFT, KC_LGUI, KC_LALT, KC_LCTL
 
 #define ________________NUMBER_LEFT________________ KC_1, KC_2, KC_3, KC_4, KC_5
 #define ________________NUMBER_RIGHT_______________ KC_6, KC_7, KC_8, KC_9, KC_0
 #define ___________________BLANK___________________ _______, _______, _______, _______, _______
+
+
+#ifdef OLED_DRIVER_ENABLE
+    #include "oled/oled.h"
+#endif
+
 
 layer_state_t layer_state_set_keymap(layer_state_t state);
 bool          process_record_keymap(uint16_t keycode, keyrecord_t *record);

@@ -27,4 +27,4 @@ RGB_MATRIX_ENABLE = yes
 SLEEP_LED_ENABLE   = no    # Breathing sleep LED during USB suspend
 
 OLED_ENABLE = yes
-OLED_DRIVER = SSD1306
+OLED_DRIVER = ssd1306
