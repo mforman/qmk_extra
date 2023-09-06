@@ -10,6 +10,12 @@ Bonus - this also keeps VS Code happy by not trying to load the massive C projec
 
 ![](img/gergoplex---qwerty.png)
 
+### Tap vs Hold
+
+In the diagram above, what's printed on the face of the key is what you get when you tap the key. What's printed on the small front face is what you get when you hold them key. These are modifier keys like `cmd` and `shift`.
+
+For example, the key on your right thumb is `backspace` when pressed, but activates `SHIFT` when held.
+
 There are only 36 keys used by the layout. With so many fewer keys, we rely on layers to fit everything in. It sounds complicated, but you get used to it pretty quickly. 
 
 Everyone already knows about one layer: the `SHIFT` layer.
