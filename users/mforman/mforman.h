@@ -5,7 +5,9 @@
 #include "version.h"
 #include "eeprom.h"
 #include "switcher/switcher.h"
-
+#ifdef OLED_DRIVER_ENABLE
+    #include "oled/oled.h"
+#endif
 
 // clang-format off
 enum keyboard_layers {
@@ -102,11 +104,6 @@ enum mforman_keycodes {
 #define ________________NUMBER_LEFT________________ KC_1, KC_2, KC_3, KC_4, KC_5
 #define ________________NUMBER_RIGHT_______________ KC_6, KC_7, KC_8, KC_9, KC_0
 #define ___________________BLANK___________________ _______, _______, _______, _______, _______
-
-
-#ifdef OLED_DRIVER_ENABLE
-    #include "oled/oled.h"
-#endif
 
 
 layer_state_t layer_state_set_keymap(layer_state_t state);

@@ -1,8 +1,4 @@
 #include "mforman.h"
-#ifdef COMBO_ENABLE
-    #include "g/keymap_combo.h"
-#endif
-
 
 userspace_config_t userspace_config;
 
