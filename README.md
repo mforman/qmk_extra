@@ -37,7 +37,7 @@ Using the `D` as an example:
 * Holding down `enter` to activate `RAISE` you get `5`
 * Holding down `enter` and holding `J` (for `SHIFT`) you get `%`
 
-The `RAISE` layer keys are shown in blue in the top-right corner of the key in the diagram
+The `RAISE` layer keys are shown in <span style="color: blue">blue</span> in the top-right corner of the key in the diagram
 
 ### Lower Layer
 
@@ -46,6 +46,8 @@ Similar to `RAISE` holding down the big thumb key on the left hand activates the
 The main thing found on this layer is the arrow key and other navigation keys (page up/down, home/end). Arrows are one the home row of the right hand. `J` becomes `left`, `K` becomes `down`, etc.
 
 You have the same home-row modifiers under the left hand that you have on the right with `RAISE`, but the `LOWER` layer also includes the F keys in the same place as the number pad. 
+
+The `LOWER` layer keys are shown in <span style="color: red">red</span> in the lower-right corner of the key in the diagram
 
 ### Adjust Layer
 
@@ -60,6 +62,8 @@ The right hand of the `ADJUST` layer controls RGB light effects
 
 * `A` toggles the lights
 * `Q` cycles through the lighting effects
+
+The `ADJUST` layer keys are shown in <span style="color: grey">grey</span> in the top-left corner of the key in the diagram
 
 ## Combos
 
