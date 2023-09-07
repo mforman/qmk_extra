@@ -79,7 +79,7 @@ enum mforman_keycodes {
 #define _____LOWER_THUMB_L_____ _______, _______, _______
 
 #define _________________LOWER_R1__________________ KC_INS, KC_HOME, KC_PGDN, KC_PGUP, KC_END
-#define _________________LOWER_R2__________________ KC_CAPS, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT
+#define _________________LOWER_R2__________________ CW_TOGG, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT
 #define _________________LOWER_R3__________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define _____LOWER_THUMB_R_____ _______, KC_DEL, _______
 
