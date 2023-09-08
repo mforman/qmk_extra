@@ -5,11 +5,11 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_COLEMAK] = LAYOUT_ergodox_pretty_wrapper(
-_______, ________________NUMBER_LEFT________________, _______,      _______, ________________NUMBER_RIGHT_______________, _______,
-_______, _________________COLEMAK_L1________________, _______,      _______, _________________COLEMAK_R1________________, _______,
-_______, _________________COLEMAK_L2________________,                        _________________COLEMAK_R2________________, _______,
+KC_ESC , ________________NUMBER_LEFT________________, _______,      _______, ________________NUMBER_RIGHT_______________, KC_EQL ,
+KC_TAB , _________________COLEMAK_L1________________, _______,      _______, _________________COLEMAK_R1________________, KC_MINS,
+CW_TOGG, _________________COLEMAK_L2________________,                        _________________COLEMAK_R2________________, KC_COLN,
 OSM_CTL, _________________COLEMAK_L3________________, KC_SPC ,      KC_SPC , _________________COLEMAK_R3________________, OSM_SFT,
-_______, _______, _______, _______, TC_CMD ,                                          TC_OPT , _______, _______, _______, _______,
+KC_F13 , _______, _______, _______, TC_CMD ,                                          TC_OPT , KC_LEFT, KC_DOWN, KC_UP  , KC_RGHT,
 
                                             _______, _______,       _______, _______,
                                                      _______,       _______,
@@ -67,14 +67,13 @@ _______, _______, _______, _______, _______,                                    
 
 // clang-format on
 
-uint32_t layer_state_set_keymap(uint32_t state) {
-    uint8_t layer = biton32(state);
+layer_state_t layer_state_set_keymap(layer_state_t state) {
     ergodox_board_led_off();
     ergodox_right_led_1_off();
     ergodox_right_led_2_off();
     ergodox_right_led_3_off();
     if(!userspace_config.is_mac_os) {ergodox_right_led_2_on();}
-    switch (layer) {
+    switch (get_highest_layer(state))  {
         case _LOWER:
             ergodox_right_led_3_on();
             break;
