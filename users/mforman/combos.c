@@ -29,6 +29,7 @@ const uint16_t PROGMEM ctrlRight[] = {KC_RIGHT, KC_END, COMBO_END};
 
 const uint16_t PROGMEM volDwnUp[] = {KC_VOLD, KC_VOLU, COMBO_END};
 const uint16_t PROGMEM spcTabCmdCt[] = {TC_SPC, TC_TAB, COMBO_END};
+const uint16_t PROGMEM optBspc[] = {TC_BSP, TC_OPT, COMBO_END};
 const uint16_t PROGMEM grvCtl[] = {KC_GRV, KC_LCTL, COMBO_END};
 
 combo_t key_combos[] = {
@@ -60,5 +61,6 @@ combo_t key_combos[] = {
 
     COMBO(volDwnUp, KC_MUTE),
     COMBO(spcTabCmdCt, LCTL(KC_LGUI)),
+    COMBO(optBspc, KC_DEL),
     COMBO(grvCtl, CMD_GRV)
 };
