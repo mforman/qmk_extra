@@ -12,13 +12,13 @@ const uint16_t PROGMEM commDotScl[] = {KC_COMMA, KC_DOT, COMBO_END};
 
 // COLEMAK
 const uint16_t PROGMEM wfEsc[] = {KC_W, KC_F, COMBO_END};
-const uint16_t PROGMEM rsBspc[] = {KC_R, KC_S, COMBO_END};
-const uint16_t PROGMEM arsBspc[] = {KC_A, KC_R, KC_S, COMBO_END};
-const uint16_t PROGMEM stTab[] = {KC_S, KC_T, COMBO_END};
-const uint16_t PROGMEM rstAltTab[] = {KC_R, KC_S, KC_T, COMBO_END};
+const uint16_t PROGMEM rsBspc[] = {MT_R, MT_S, COMBO_END};
+const uint16_t PROGMEM arsBspc[] = {KC_A, MT_R, MT_S, COMBO_END};
+const uint16_t PROGMEM stTab[] = {MT_S, MT_T, COMBO_END};
+const uint16_t PROGMEM rstAltTab[] = {MT_R, MT_S, MT_T, COMBO_END};
 const uint16_t PROGMEM luBckSlsh[] = {KC_L, KC_U, COMBO_END};
-const uint16_t PROGMEM neDash[] = {KC_N, KC_E, COMBO_END};
-const uint16_t PROGMEM eiColon[] = {KC_E, KC_I, COMBO_END};
+const uint16_t PROGMEM neDash[] = {MT_N, MT_E, COMBO_END};
+const uint16_t PROGMEM eiColon[] = {MT_E, MT_I, COMBO_END};
 const uint16_t PROGMEM hCommUnd[] = {KC_H, KC_COMMA, COMBO_END};
 
 // Others

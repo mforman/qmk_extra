@@ -8,8 +8,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 KC_ESC , ________________NUMBER_LEFT________________, _______,      _______, ________________NUMBER_RIGHT_______________, KC_EQL ,
 KC_TAB , _________________COLEMAK_L1________________, _______,      _______, _________________COLEMAK_R1________________, KC_MINS,
 CW_TOGG, _________________COLEMAK_L2________________,                        _________________COLEMAK_R2________________, KC_COLN,
-OSM_CTL, _________________COLEMAK_L3________________, KC_SPC ,      KC_SPC , _________________COLEMAK_R3________________, OSM_ALT,
-KC_F13 , _______, _______, _______, OSM_CTL ,                                          OSM_ALT, KC_LEFT, KC_DOWN, KC_UP  , KC_RGHT,
+OSM_SFT, _________________COLEMAK_L3________________, KC_SPC ,      KC_SPC , _________________COLEMAK_R3________________, OSM_SFT,
+KC_F13 , _______, _______, _______, OSM_CTL ,                                          OSM_ALT, KC_LEFT, KC_DOWN, KC_UP , KC_RGHT,
 
                                             _______, _______,       _______, _______,
                                                      _______,       _______,

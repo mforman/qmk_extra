@@ -34,10 +34,23 @@ enum mforman_keycodes {
 #define TC_BSP LSFT_T(KC_BSPC)
 #define TC_ENT LT(_RAISE, KC_ENTER)
 
-#define MT_F11 CTL_T(KC_F11)
-#define MT_F4 ALT_T(KC_F4)
-#define MT_F5 GUI_T(KC_F5)
-#define MT_F6 SFT_T(KC_F6)
+// Home row modifier.
+// Use CAG/⎈⎇◆ to be mac-friendly
+// CG_TOGG will switch it to GAC/◆⎇⎈ in Windows
+// Leave shift on the thumb
+// https://precondition.github.io/home-row-mods#cags 
+
+#define MT_R CTL_T(KC_R)
+#define MT_S ALT_T(KC_S)
+#define MT_T GUI_T(KC_T)
+
+#define MT_N GUI_T(KC_N)
+#define MT_E ALT_T(KC_E)
+#define MT_I CTL_T(KC_I)
+
+#define MT_F4 CTL_T(KC_F4)
+#define MT_F5 ALT_T(KC_F5)
+#define MT_F6 GUI_T(KC_F6)
 
 #define MT_LBRC SFT_T(KC_LBRC)
 #define MT_EQL GUI_T(KC_EQL)
@@ -65,15 +78,15 @@ enum mforman_keycodes {
 #define _________________QWERTY_R3_________________ KC_N, KC_M, KC_COMM, KC_DOT, KC_SLASH
 
 #define _________________COLEMAK_L1________________ KC_Q, KC_W, KC_F, KC_P, KC_B
-#define _________________COLEMAK_L2________________ KC_A, KC_R, KC_S, KC_T, KC_G
+#define _________________COLEMAK_L2________________ KC_A, MT_R, MT_S, MT_T, KC_G
 #define _________________COLEMAK_L3________________ KC_Z, KC_X, KC_C, KC_D, KC_V
 
 #define _________________COLEMAK_R1________________ KC_J, KC_L, KC_U, KC_Y, KC_QUOT
-#define _________________COLEMAK_R2________________ KC_M, KC_N, KC_E, KC_I, KC_O
+#define _________________COLEMAK_R2________________ KC_M, MT_N, MT_E, MT_I, KC_O
 #define _________________COLEMAK_R3________________ KC_K, KC_H, KC_COMM, KC_DOT, KC_SLASH
 
-#define _________________LOWER_L1__________________ KC_F12, KC_F7, KC_F8, KC_F9, XXXXXXX
-#define _________________LOWER_L2__________________ MT_F11, MT_F4, MT_F5, MT_F6, KC_F13
+#define _________________LOWER_L1__________________ KC_F12, KC_F7, KC_F8, KC_F9, LALT(KC_F4)
+#define _________________LOWER_L2__________________ KC_F11, MT_F4, MT_F5, MT_F6, KC_F13
 #define _________________LOWER_L3__________________ KC_F10, KC_F1, KC_F2, KC_F3, XXXXXXX
 #define _____LOWER_THUMB_L_____ _______, _______, _______
 
