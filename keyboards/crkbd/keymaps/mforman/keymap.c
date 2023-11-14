@@ -11,7 +11,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_COLEMAK] = LAYOUT_crkbd_wrapper(
     KC_ESC , _________________COLEMAK_L1________________,     _________________COLEMAK_R1________________, KC_EQL ,
     CW_TOGG, _________________COLEMAK_L2________________,     _________________COLEMAK_R2________________, KC_MINS,
-    OSM_CTL, _________________COLEMAK_L3________________,     _________________COLEMAK_R3________________, OSM_SFT,
+    OSM_CTL, _________________COLEMAK_L3________________,     _________________COLEMAK_R3________________, OSM_ALT,
                                 ______BASE_THUMB_L______,     ______BASE_THUMB_R______
 ),
   [_QWERTY] = LAYOUT_crkbd_wrapper(

@@ -22,14 +22,9 @@ const uint16_t PROGMEM eiColon[] = {KC_E, KC_I, COMBO_END};
 const uint16_t PROGMEM hCommUnd[] = {KC_H, KC_COMMA, COMBO_END};
 
 // Others
-const uint16_t PROGMEM ctrlLeft[] = {KC_LEFT, KC_HOME, COMBO_END};
-const uint16_t PROGMEM ctrlDown[] = {KC_UP, KC_PGDN, COMBO_END};
-const uint16_t PROGMEM ctrlUp[] = {KC_DOWN, KC_PGUP, COMBO_END};
-const uint16_t PROGMEM ctrlRight[] = {KC_RIGHT, KC_END, COMBO_END};
-
 const uint16_t PROGMEM volDwnUp[] = {KC_VOLD, KC_VOLU, COMBO_END};
 const uint16_t PROGMEM spcTabCmdCt[] = {TC_SPC, TC_TAB, COMBO_END};
-const uint16_t PROGMEM optBspc[] = {TC_BSP, TC_OPT, COMBO_END};
+const uint16_t PROGMEM entBspc[] = {TC_BSP, TC_ENT, COMBO_END};
 const uint16_t PROGMEM grvCtl[] = {KC_GRV, KC_LCTL, COMBO_END};
 
 combo_t key_combos[] = {
@@ -54,13 +49,8 @@ combo_t key_combos[] = {
     COMBO(eiColon, KC_COLN),
     COMBO(hCommUnd, KC_UNDS),
 
-    COMBO(ctrlLeft, LCTL(KC_LEFT)),
-    COMBO(ctrlDown, LCTL(KC_DOWN)),
-    COMBO(ctrlUp, LCTL(KC_UP)),
-    COMBO(ctrlRight, LCTL(KC_RIGHT)),
-
     COMBO(volDwnUp, KC_MUTE),
     COMBO(spcTabCmdCt, LCTL(KC_LGUI)),
-    COMBO(optBspc, KC_DEL),
+    COMBO(entBspc, KC_DEL),
     COMBO(grvCtl, CMD_GRV)
 };

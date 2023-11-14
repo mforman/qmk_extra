@@ -29,10 +29,8 @@ enum mforman_keycodes {
 // clang-format on
 
 // Thumb cluster keys
-#define TC_CMD OSM(MOD_LGUI)
-#define TC_SPC LCTL_T(KC_SPACE)
+#define TC_SPC LGUI_T(KC_SPACE)
 #define TC_TAB LT(_LOWER, KC_TAB)
-#define TC_OPT OSM(MOD_LALT)
 #define TC_BSP LSFT_T(KC_BSPC)
 #define TC_ENT LT(_RAISE, KC_ENTER)
 
@@ -53,9 +51,10 @@ enum mforman_keycodes {
 
 #define OSM_CTL OSM(MOD_LCTL)
 #define OSM_SFT OSM(MOD_LSFT)
+#define OSM_ALT OSM(MOD_LALT)
 
-#define ______BASE_THUMB_L______ TC_CMD, TC_SPC, TC_TAB
-#define ______BASE_THUMB_R______ TC_ENT, TC_BSP, TC_OPT
+#define ______BASE_THUMB_L______ OSM_CTL, TC_SPC, TC_TAB
+#define ______BASE_THUMB_R______ TC_ENT,  TC_BSP, OSM_ALT
 
 #define _________________QWERTY_L1_________________ KC_Q, KC_W, KC_E, KC_R, KC_T
 #define _________________QWERTY_L2_________________ KC_A, KC_S, KC_D, KC_F, KC_G
@@ -78,8 +77,8 @@ enum mforman_keycodes {
 #define _________________LOWER_L3__________________ KC_F10, KC_F1, KC_F2, KC_F3, XXXXXXX
 #define _____LOWER_THUMB_L_____ _______, _______, _______
 
-#define _________________LOWER_R1__________________ KC_INS, KC_HOME, KC_PGDN, KC_PGUP, KC_END
-#define _________________LOWER_R2__________________ CW_TOGG, KC_LEFT, KC_DOWN, KC_UP, KC_RGHT
+#define _________________LOWER_R1__________________ KC_PGUP, KC_HOME, KC_UP,   KC_END,  XXXXXXX
+#define _________________LOWER_R2__________________ KC_PGDN, KC_LEFT, KC_DOWN, KC_RGHT, XXXXXXX
 #define _________________LOWER_R3__________________ XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
 #define _____LOWER_THUMB_R_____ _______, KC_DEL, _______
 
