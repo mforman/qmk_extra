@@ -62,6 +62,7 @@ enum mforman_keycodes {
 #define ZOOM_OUT G(KC_MINS)
 #define ZOOM_RST G(KC_0)
 
+#define OSM_GUI OSM(MOD_LGUI)
 #define OSM_CTL OSM(MOD_LCTL)
 #define OSM_SFT OSM(MOD_LSFT)
 #define OSM_ALT OSM(MOD_LALT)
