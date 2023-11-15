@@ -50,6 +50,16 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     return true;
 }
 
+uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
+    switch (keycode) {
+        case TC_SPC:
+        case TC_BSP:
+            return 200;
+        default:
+            return TAPPING_TERM;
+    }
+}
+
 __attribute__((weak)) void suspend_power_down_keymap(void) {}
 
 void suspend_power_down_user(void) {
