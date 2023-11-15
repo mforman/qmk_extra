@@ -8,6 +8,7 @@
     #define COMBO_TERM 30
 #endif
 
-#define ONESHOT_TIMEOUT 5000  /* Time (in ms) before the one shot key is released */
-#define TAPPING_TERM 200
+#define ONESHOT_TIMEOUT 1000 /* Time (in ms) before the one shot key is released */
+#define TAPPING_TERM 250
+#define TAPPING_TERM_PER_KEY
 #define PERMISSIVE_HOLD

@@ -62,12 +62,13 @@ enum mforman_keycodes {
 #define ZOOM_OUT G(KC_MINS)
 #define ZOOM_RST G(KC_0)
 
+#define OSM_GUI OSM(MOD_LGUI)
 #define OSM_CTL OSM(MOD_LCTL)
 #define OSM_SFT OSM(MOD_LSFT)
 #define OSM_ALT OSM(MOD_LALT)
 
-#define ______BASE_THUMB_L______ OSM_CTL, TC_SPC, TC_TAB
-#define ______BASE_THUMB_R______ TC_ENT,  TC_BSP, OSM_ALT
+#define ______BASE_THUMB_L______ XXXXXXX, TC_SPC, TC_TAB
+#define ______BASE_THUMB_R______ TC_ENT,  TC_BSP, XXXXXXX 
 
 #define _________________QWERTY_L1_________________ KC_Q, KC_W, KC_E, KC_R, KC_T
 #define _________________QWERTY_L2_________________ KC_A, KC_S, KC_D, KC_F, KC_G
@@ -97,8 +98,8 @@ enum mforman_keycodes {
 
 #define _________________RAISE_L1__________________ KC_SLSH, KC_7, KC_8, KC_9, KC_MINS
 #define _________________RAISE_L2__________________ KC_ASTR, KC_4, KC_5, KC_6, KC_PLUS
-#define _________________RAISE_L3__________________ KC_PIPE, KC_1, KC_2, KC_3, KC_COMM
-#define _____RAISE_THUMB_L_____ KC_DOT, KC_0, _______
+#define _________________RAISE_L3__________________ KC_PIPE, KC_1, KC_2, KC_3, KC_DOT 
+#define _____RAISE_THUMB_L_____ XXXXXXX, KC_0, _______
 
 #define _________________RAISE_R1__________________ ZOOM_IN , KC_LPRN, KC_UNDS, KC_RPRN, KC_GRV
 #define _________________RAISE_R2__________________ ZOOM_RST, MT_LBRC, MT_EQL, MT_RBRC, KC_LCTL
