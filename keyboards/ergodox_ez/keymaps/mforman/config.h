@@ -4,5 +4,3 @@
 */
 #define TAPPING_TOGGLE  1
 
-#undef TAPPING_TERM
-#define TAPPING_TERM 200
