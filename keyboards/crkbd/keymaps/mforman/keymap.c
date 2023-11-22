@@ -9,9 +9,9 @@ extern keymap_config_t keymap_config;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [_COLEMAK] = LAYOUT_crkbd_wrapper(
-    CW_TOGG, _________________COLEMAK_L1________________,     _________________COLEMAK_R1________________, _______,
-    C(KC_A), _________________COLEMAK_L2________________,     _________________COLEMAK_R2________________, C(KC_A),
-    OSM_CTL, _________________COLEMAK_L3________________,     _________________COLEMAK_R3________________, OSM_CTL,
+    CW_TOGG, _________________COLEMAK_L1________________,     _________________COLEMAK_R1________________, KC_BSLS,
+    C(KC_A), _________________COLEMAK_L2________________,     _________________COLEMAK_R2________________, KC_MINS,
+    KC_F13,  _________________COLEMAK_L3________________,     _________________COLEMAK_R3________________, OSM_CTL,
                                 ______BASE_THUMB_L______,     ______BASE_THUMB_R______
 ),
   [_QWERTY] = LAYOUT_crkbd_wrapper(

@@ -55,7 +55,7 @@ enum mforman_keycodes {
 
 #define MT_LBRC GUI_T(KC_LBRC)
 #define MT_EQL ALT_T(KC_EQL)
-#define MT_RBRC ALT_T(KC_RBRC)
+#define MT_RBRC CTL_T(KC_RBRC)
 
 #define CMD_GRV LCMD(KC_GRV)
 
