@@ -13,7 +13,7 @@ const uint16_t PROGMEM commDotScl[] = {KC_COMMA, KC_DOT, COMBO_END};
 // COLEMAK
 const uint16_t PROGMEM wfEsc[] = {KC_W, KC_F, COMBO_END};
 const uint16_t PROGMEM rsBspc[] = {MT_R, MT_S, COMBO_END};
-const uint16_t PROGMEM arsBspc[] = {KC_A, MT_R, MT_S, COMBO_END};
+const uint16_t PROGMEM arsBspc[] = {MT_A, MT_R, MT_S, COMBO_END};
 const uint16_t PROGMEM stTab[] = {MT_S, MT_T, COMBO_END};
 const uint16_t PROGMEM rstAltTab[] = {MT_R, MT_S, MT_T, COMBO_END};
 const uint16_t PROGMEM luBckSlsh[] = {KC_L, KC_U, COMBO_END};
@@ -25,7 +25,7 @@ const uint16_t PROGMEM hCommUnd[] = {KC_H, KC_COMMA, COMBO_END};
 const uint16_t PROGMEM volDwnUp[] = {KC_VOLD, KC_VOLU, COMBO_END};
 const uint16_t PROGMEM spcTabCmdCt[] = {TC_SPC, TC_TAB, COMBO_END};
 const uint16_t PROGMEM entBspc[] = {TC_BSP, TC_ENT, COMBO_END};
-const uint16_t PROGMEM grvSft[] = {KC_GRV, KC_LSFT, COMBO_END};
+const uint16_t PROGMEM grvSft[] = {KC_GRV, KC_RCTL, COMBO_END};
 
 combo_t key_combos[] = {
     COMBO(weEsc, KC_ESC),

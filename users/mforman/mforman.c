@@ -1,4 +1,7 @@
 #include "mforman.h"
+#ifdef CONSOLE_ENABLE
+#include "print.h"
+#endif
 
 userspace_config_t userspace_config;
 
@@ -11,6 +14,19 @@ qk_tap_dance_action_t tap_dance_actions[] = {
 __attribute__((weak)) bool process_record_keymap(uint16_t keycode, keyrecord_t *record) { return true; }
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
+    #ifdef CONSOLE_ENABLE
+        const bool is_combo = record->event.type == COMBO_EVENT;
+        uprintf("0x%04X,%u,%u,%u,%b,0x%02X,0x%02X,%u\n",
+             keycode,
+             is_combo ? 254 : record->event.key.row,
+             is_combo ? 254 : record->event.key.col,
+             get_highest_layer(layer_state),
+             record->event.pressed,
+             get_mods(),
+             get_oneshot_mods(),
+             record->tap.count
+             );
+    #endif
     #ifdef OLED_DRIVER_ENABLE
         process_record_user_oled(keycode, record);
     #endif
@@ -52,11 +68,11 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 
 uint16_t get_tapping_term(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case TC_SPC:
-        case TC_TAB:
-        case TC_ENT:
-        case TC_BSP:
-            return 200;
+        // case TC_SPC:
+        // case TC_TAB:
+        // case TC_ENT:
+        // case TC_BSP:
+        //     return 200;
         default:
             return TAPPING_TERM;
     }
@@ -108,7 +124,7 @@ __attribute__((weak)) void eeconfig_init_keymap(void) {}
 
 void eeconfig_init_user(void) {
     userspace_config.raw              = 0;
-    userspace_config.rgb_layer_change = true;
+    userspace_config.rgb_layer_change = false;
     userspace_config.is_mac_os = true;
     eeconfig_update_user(userspace_config.raw);
     eeconfig_init_keymap();

@@ -34,28 +34,33 @@ enum mforman_keycodes {
 #define TC_BSP LSFT_T(KC_BSPC)
 #define TC_ENT LT(_RAISE, KC_ENTER)
 
-// Home row modifier.
-// Use CAG/⎈⎇◆ to be mac-friendly
-// CG_TOGG will switch it to GAC/◆⎇⎈ in Windows
+// Home row modifiers.
+// GASC/ ◆⎇ ⇧⎈
+// By default, we'll swap G and C to be Mac friendly CASG /◆⎈⎇ ⇧ 
+// CG_TOGG will switch it to the GASC in Windows
 // Leave shift on the thumb on the alpha layer
-// https://precondition.github.io/home-row-mods#cags 
+// https://precondition.github.io/home-row-mods#gasc
 
-#define MT_R CTL_T(KC_R)
-#define MT_S ALT_T(KC_S)
-#define MT_T GUI_T(KC_T)
+// Left-hand home row mods
+#define MT_A LCTL_T(KC_A)
+#define MT_R LALT_T(KC_R)
+#define MT_S LSFT_T(KC_S)
+#define MT_T LGUI_T(KC_T) 
 
-#define MT_N GUI_T(KC_N)
-#define MT_E ALT_T(KC_E)
-#define MT_I CTL_T(KC_I)
+// Right-hand home row mods
+#define MT_N RGUI_T(KC_N)
+#define MT_E RSFT_T(KC_E)
+#define MT_I LALT_T(KC_I)
+#define MT_O RCTL_T(KC_O)
 
 #define MT_F11 SFT_T(KC_F11)
 #define MT_F4 CTL_T(KC_F4)
 #define MT_F5 ALT_T(KC_F5)
 #define MT_F6 GUI_T(KC_F6)
 
-#define MT_LBRC GUI_T(KC_LBRC)
-#define MT_EQL ALT_T(KC_EQL)
-#define MT_RBRC CTL_T(KC_RBRC)
+#define MT_LBRC RGUI_T(KC_LBRC)
+#define MT_EQL RSFT_T(KC_EQL)
+#define MT_RBRC LALT_T(KC_RBRC)
 
 #define CMD_GRV LCMD(KC_GRV)
 
@@ -80,11 +85,11 @@ enum mforman_keycodes {
 #define _________________QWERTY_R3_________________ KC_N, KC_M, KC_COMM, KC_DOT, KC_SLASH
 
 #define _________________COLEMAK_L1________________ KC_Q, KC_W, KC_F, KC_P, KC_B
-#define _________________COLEMAK_L2________________ KC_A, MT_R, MT_S, MT_T, KC_G
+#define _________________COLEMAK_L2________________ MT_A, MT_R, MT_S, MT_T, KC_G
 #define _________________COLEMAK_L3________________ KC_Z, KC_X, KC_C, KC_D, KC_V
 
 #define _________________COLEMAK_R1________________ KC_J, KC_L, KC_U, KC_Y, KC_QUOT
-#define _________________COLEMAK_R2________________ KC_M, MT_N, MT_E, MT_I, KC_O
+#define _________________COLEMAK_R2________________ KC_M, MT_N, MT_E, MT_I, MT_O
 #define _________________COLEMAK_R3________________ KC_K, KC_H, KC_COMM, KC_DOT, KC_SLASH
 
 #define _________________LOWER_L1__________________ KC_F12, KC_F7, KC_F8, KC_F9, LALT(KC_F4)
@@ -103,7 +108,7 @@ enum mforman_keycodes {
 #define _____RAISE_THUMB_L_____ XXXXXXX, KC_0, _______
 
 #define _________________RAISE_R1__________________ ZOOM_IN , KC_LPRN, KC_UNDS, KC_RPRN, KC_GRV
-#define _________________RAISE_R2__________________ ZOOM_RST, MT_LBRC, MT_EQL,  MT_RBRC, KC_LSFT
+#define _________________RAISE_R2__________________ ZOOM_RST, MT_LBRC, MT_EQL,  MT_RBRC, KC_RCTL
 #define _________________RAISE_R3__________________ ZOOM_OUT, KC_LCBR, KC_TILD, KC_RCBR, KC_BSLS
 #define _____RAISE_THUMB_R_____ _______, _______, _______
 
@@ -113,7 +118,7 @@ enum mforman_keycodes {
 
 #define ________________ADJUST_R1__________________ XXXXXXX, CG_TOGG, QWERTY,  COLEMAK, QK_BOOT
 #define ________________ADJUST_R2__________________ KC_MPLY, KC_MRWD, KC_VOLD, KC_VOLU, KC_MFFD
-#define ________________ADJUST_R3__________________ XXXXXXX, OSM_GUI, OSM_ALT, OSM_CTL, OSM_SFT
+#define ________________ADJUST_R3__________________ XXXXXXX, DT_UP,   DT_DOWN, DT_PRNT, XXXXXXX
 
 #define ________________NUMBER_LEFT________________ KC_1, KC_2, KC_3, KC_4, KC_5
 #define ________________NUMBER_RIGHT_______________ KC_6, KC_7, KC_8, KC_9, KC_0
