@@ -1,12 +1,12 @@
 // QWERTY
 const uint16_t PROGMEM weEsc[] = {KC_W, KC_E, COMBO_END};
-const uint16_t PROGMEM sdBspc[] = {KC_S, KC_D, COMBO_END};
-const uint16_t PROGMEM asdBspc[] = {KC_A, KC_S, KC_D, COMBO_END};
-const uint16_t PROGMEM dfTab[] = {KC_D, KC_F, COMBO_END};
-const uint16_t PROGMEM sdfAltTab[] = {KC_S, KC_D, KC_F, COMBO_END};
+const uint16_t PROGMEM sdBspc[] = {MT_S_Q, MT_D, COMBO_END};
+const uint16_t PROGMEM asdBspc[] = {MT_A, MT_S_Q, MT_D, COMBO_END};
+const uint16_t PROGMEM dfTab[] = {MT_D, MT_F, COMBO_END};
+const uint16_t PROGMEM sdfAltTab[] = {MT_S_Q, MT_D, MT_F, COMBO_END};
 const uint16_t PROGMEM uiBckSlsh[] = {KC_U, KC_I, COMBO_END};
-const uint16_t PROGMEM jkDash[] = {KC_J, KC_K, COMBO_END};
-const uint16_t PROGMEM klColon[] = {KC_K, KC_L, COMBO_END};
+const uint16_t PROGMEM jkDash[] = {MT_J, MT_K, COMBO_END};
+const uint16_t PROGMEM klColon[] = {MT_K, MT_L, COMBO_END};
 const uint16_t PROGMEM mCommUnd[] = {KC_M, KC_COMMA, COMBO_END};
 const uint16_t PROGMEM commDotScl[] = {KC_COMMA, KC_DOT, COMBO_END};
 

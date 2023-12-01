@@ -41,6 +41,7 @@ enum mforman_keycodes {
 // Leave shift on the thumb on the alpha layer
 // https://precondition.github.io/home-row-mods#gasc
 
+// Colemak
 // Left-hand home row mods
 #define MT_A LCTL_T(KC_A)
 #define MT_R LALT_T(KC_R)
@@ -52,6 +53,19 @@ enum mforman_keycodes {
 #define MT_E RSFT_T(KC_E)
 #define MT_I LALT_T(KC_I)
 #define MT_O RCTL_T(KC_O)
+
+// QWERTY
+// Left-hand home row mods
+// #define MT_A LCTL_T(KC_A)
+#define MT_S_Q LALT_T(KC_S)
+#define MT_D LSFT_T(KC_D)
+#define MT_F LGUI_T(KC_F) 
+
+// Right-hand home row mods
+#define MT_J RGUI_T(KC_J)
+#define MT_K RSFT_T(KC_K)
+#define MT_L LALT_T(KC_L)
+#define MT_QUOT RCTL_T(KC_QUOT)
 
 #define MT_F11 SFT_T(KC_F11)
 #define MT_F4 CTL_T(KC_F4)
@@ -77,11 +91,11 @@ enum mforman_keycodes {
 #define ______BASE_THUMB_R______ TC_ENT,  TC_BSP, XXXXXXX 
 
 #define _________________QWERTY_L1_________________ KC_Q, KC_W, KC_E, KC_R, KC_T
-#define _________________QWERTY_L2_________________ KC_A, KC_S, KC_D, KC_F, KC_G
+#define _________________QWERTY_L2_________________ MT_A, MT_S_Q, MT_D, MT_F, KC_G
 #define _________________QWERTY_L3_________________ KC_Z, KC_X, KC_C, KC_V, KC_B
 
 #define _________________QWERTY_R1_________________ KC_Y, KC_U, KC_I, KC_O, KC_P
-#define _________________QWERTY_R2_________________ KC_H, KC_J, KC_K, KC_L, KC_QUOT
+#define _________________QWERTY_R2_________________ KC_H, MT_J, MT_K, MT_L, MT_QUOT
 #define _________________QWERTY_R3_________________ KC_N, KC_M, KC_COMM, KC_DOT, KC_SLASH
 
 #define _________________COLEMAK_L1________________ KC_Q, KC_W, KC_F, KC_P, KC_B
