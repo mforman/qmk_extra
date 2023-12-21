@@ -8,7 +8,7 @@ Bonus - this also keeps VS Code happy by not trying to load the massive C projec
 
 ## Layout
 
-![](img/gergoplex---qwerty.png)
+![](img/crkbd-keyboard.png)
 
 ## Tap vs Hold
 
@@ -35,7 +35,7 @@ Using the `D` as an example:
 
 * On it's own, you get `d`
 * Holding down `enter` to activate `RAISE` you get `5`
-* Holding down `enter` and holding `J` (for `SHIFT`) you get `%`
+* Holding down `enter` and holding `K` (for `SHIFT`) you get `%`
 
 The `RAISE` layer keys are shown in <span style="color: blue">blue</span> in the top-right corner of the key in the diagram
 
@@ -85,4 +85,4 @@ In addition to all the layers, pressing two (or three) keys at the same time, tr
 1. From the local QMK folder run: `bash <path to keymap repo>/add_links.sh`
 1. Build and flash as normal (ie. `make crkbd:mforman:avrdude-split-right`)
 
-When finished, discard local changes in the QMK repo so you merge upstream changes with no conflict next time.
+When finished, discard local changes in the QMK repo so you can merge upstream changes with no conflict next time.

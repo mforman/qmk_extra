@@ -1,15 +1,15 @@
-#include "mforman.h"  // in users/mforman
+#include "mforman.h" // in users/mforman
 
 // clang-format off
 #define LAYOUT_ergodox_pretty_wrapper(...)   LAYOUT_ergodox_pretty(__VA_ARGS__)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 [_COLEMAK] = LAYOUT_ergodox_pretty_wrapper(
-KC_ESC , ________________NUMBER_LEFT________________, _______,      _______, ________________NUMBER_RIGHT_______________, KC_EQL ,
-CW_TOGG, _________________COLEMAK_L1________________, _______,      _______, _________________COLEMAK_R1________________, KC_MINS,
-C(KC_A), _________________COLEMAK_L2________________,                        _________________COLEMAK_R2________________, C(KC_A),
-OSM_CTL, _________________COLEMAK_L3________________, KC_SPC ,      KC_SPC , _________________COLEMAK_R3________________, OSM_CTL,
-KC_F13 , _______, _______, _______, _______ ,                                          _______, KC_LEFT, KC_DOWN, KC_UP , KC_RGHT,
+_______, ________________NUMBER_LEFT________________, _______,      _______, ________________NUMBER_RIGHT_______________, _______,
+_______, _________________COLEMAK_L1________________, _______,      _______, _________________COLEMAK_R1________________, _______,
+CW_TOGG, _________________COLEMAK_L2________________,                        _________________COLEMAK_R2________________, _______, 
+_______, _________________COLEMAK_L3________________, _______,      _______, _________________COLEMAK_R3________________, _______,
+KC_F13 , _______, _______, _______, TC_CTL,                                            TC_OPT, _______, _______, _______, _______,
 
                                             _______, _______,       _______, _______,
                                                      _______,       _______,
@@ -21,7 +21,7 @@ _______, ________________NUMBER_LEFT________________, _______,      _______, ___
 _______, _________________QWERTY_L1_________________, _______,      _______, _________________QWERTY_R1_________________, _______,
 _______, _________________QWERTY_L2_________________,                        _________________QWERTY_R2_________________, _______,
 _______, _________________QWERTY_L3_________________, _______,      _______, _________________QWERTY_R3_________________, _______,
-_______, _______, _______, _______, _______,                                          _______, _______, _______, _______, _______,
+_______, _______, _______, _______, TC_CTL,                                            TC_OPT, _______, _______, _______, _______,
 
                                             _______, _______,       _______, _______,
                                                      _______,       _______,
@@ -68,24 +68,26 @@ _______, _______, _______, _______, _______,                                    
 // clang-format on
 
 layer_state_t layer_state_set_keymap(layer_state_t state) {
-    ergodox_board_led_off();
-    ergodox_right_led_1_off();
-    ergodox_right_led_2_off();
-    ergodox_right_led_3_off();
-    if(!userspace_config.is_mac_os) {ergodox_right_led_2_on();}
-    switch (get_highest_layer(state))  {
-        case _LOWER:
-            ergodox_right_led_3_on();
-            break;
-        case _RAISE:
-            ergodox_right_led_1_on();
-            break;
-        case _ADJUST:
-            ergodox_right_led_1_on();
-            ergodox_right_led_3_on();
-            break;
-        default:
-            break;
-    }
-    return state;
+  ergodox_board_led_off();
+  ergodox_right_led_1_off();
+  ergodox_right_led_2_off();
+  ergodox_right_led_3_off();
+  if (!userspace_config.is_mac_os) {
+    ergodox_right_led_2_on();
+  }
+  switch (get_highest_layer(state)) {
+  case _LOWER:
+    ergodox_right_led_3_on();
+    break;
+  case _RAISE:
+    ergodox_right_led_1_on();
+    break;
+  case _ADJUST:
+    ergodox_right_led_1_on();
+    ergodox_right_led_3_on();
+    break;
+  default:
+    break;
+  }
+  return state;
 };
