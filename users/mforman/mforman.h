@@ -80,10 +80,6 @@ enum mforman_keycodes {
 
 #define CMD_GRV LCMD(KC_GRV)
 
-#define ZOOM_IN G(KC_EQL)
-#define ZOOM_OUT G(KC_MINS)
-#define ZOOM_RST G(KC_0)
-
 #define OSM_GUI OSM(MOD_LGUI)
 #define OSM_CTL OSM(MOD_LCTL)
 #define OSM_SFT OSM(MOD_LSFT)
@@ -124,9 +120,9 @@ enum mforman_keycodes {
 #define _________________RAISE_L3__________________ KC_PIPE, KC_1, KC_2, KC_3, KC_DOT
 #define _____RAISE_THUMB_L_____ XXXXXXX, KC_0, _______
 
-#define _________________RAISE_R1__________________ ZOOM_IN,  KC_LPRN, XXXXXXX, KC_RPRN, KC_GRV
-#define _________________RAISE_R2__________________ ZOOM_RST, MT_LBRC, MT_EQL,  MT_RBRC, KC_RCTL
-#define _________________RAISE_R3__________________ ZOOM_OUT, KC_LCBR, KC_TILD, KC_RCBR, KC_BSLS
+#define _________________RAISE_R1__________________ XXXXXXX, KC_LPRN, KC_PIPE, KC_RPRN, KC_GRV
+#define _________________RAISE_R2__________________ XXXXXXX, MT_LBRC, MT_EQL,  MT_RBRC, KC_RCTL
+#define _________________RAISE_R3__________________ XXXXXXX, KC_LCBR, KC_TILD, KC_RCBR, KC_BSLS
 #define _____RAISE_THUMB_R_____ _______, _______, _______
 
 #define ________________ADJUST_L1__________________ RGB_MOD, RGB_IDL, KC_RGB_T, RGB_RMOD, XXXXXXX
