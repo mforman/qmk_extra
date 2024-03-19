@@ -129,7 +129,7 @@ __attribute__((weak)) void eeconfig_init_keymap(void) {}
 void eeconfig_init_user(void) {
   userspace_config.raw = 0;
   userspace_config.rgb_layer_change = false;
-  userspace_config.is_mac_os = true;
+  userspace_config.is_mac_os = false;
   eeconfig_update_user(userspace_config.raw);
   eeconfig_init_keymap();
   keyboard_init();

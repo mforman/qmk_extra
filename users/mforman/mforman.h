@@ -38,43 +38,42 @@ enum mforman_keycodes {
 
 // Home row modifiers.
 // GASC/ ◆⎇ ⇧⎈
-// By default, we'll swap G and C to be Mac friendly CASG /◆⎈⎇ ⇧
-// CG_TOGG will switch it to the GASC in Windows
+// CG_TOGG will switch it to the CASG in MacOS
 // Leave shift on the thumb on the alpha layer
 // https://precondition.github.io/home-row-mods#gasc
 
 // Colemak
 // Left-hand home row mods
-#define MT_A LCTL_T(KC_A)
+#define MT_A LGUI_T(KC_A)
 #define MT_R LALT_T(KC_R)
 #define MT_S LSFT_T(KC_S)
-#define MT_T LGUI_T(KC_T)
+#define MT_T LCTL_T(KC_T)
 
 // Right-hand home row mods
-#define MT_N RGUI_T(KC_N)
+#define MT_N RCTL_T(KC_N)
 #define MT_E RSFT_T(KC_E)
 #define MT_I LALT_T(KC_I)
-#define MT_O RCTL_T(KC_O)
+#define MT_O RGUI_T(KC_O)
 
 // QWERTY
 // Left-hand home row mods
 // #define MT_A LCTL_T(KC_A)
 #define MT_S_Q LALT_T(KC_S)
 #define MT_D LSFT_T(KC_D)
-#define MT_F LGUI_T(KC_F)
+#define MT_F LCTL_T(KC_F)
 
 // Right-hand home row mods
-#define MT_J RGUI_T(KC_J)
+#define MT_J RCTL_T(KC_J)
 #define MT_K RSFT_T(KC_K)
 #define MT_L LALT_T(KC_L)
-#define MT_QUOT RCTL_T(KC_QUOT)
+#define MT_QUOT RGUI_T(KC_QUOT)
 
-#define MT_F11 CTL_T(KC_F11)
+#define MT_F11 GUI_T(KC_F11)
 #define MT_F4 ALT_T(KC_F4)
 #define MT_F5 SFT_T(KC_F5)
-#define MT_F6 GUI_T(KC_F6)
+#define MT_F6 CTL_T(KC_F6)
 
-#define MT_LBRC RGUI_T(KC_LBRC)
+#define MT_LBRC RCTL_T(KC_LBRC)
 #define MT_EQL RSFT_T(KC_EQL)
 #define MT_RBRC LALT_T(KC_RBRC)
 
@@ -121,7 +120,7 @@ enum mforman_keycodes {
 #define _____RAISE_THUMB_L_____ XXXXXXX, KC_0, _______
 
 #define _________________RAISE_R1__________________ XXXXXXX, KC_LPRN, KC_PIPE, KC_RPRN, KC_GRV
-#define _________________RAISE_R2__________________ XXXXXXX, MT_LBRC, MT_EQL,  MT_RBRC, KC_RCTL
+#define _________________RAISE_R2__________________ XXXXXXX, MT_LBRC, MT_EQL,  MT_RBRC, KC_RGUI
 #define _________________RAISE_R3__________________ XXXXXXX, KC_LCBR, KC_TILD, KC_RCBR, KC_BSLS
 #define _____RAISE_THUMB_R_____ _______, _______, _______
 
